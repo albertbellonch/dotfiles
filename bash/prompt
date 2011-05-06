@@ -48,5 +48,4 @@ unset bash_prompt
 
 uptime
 echo "Welcome back, Albert!"
-pwd
-fortune | cowsay -f small.cow
+fortune | cowsay -f code/dotfiles/bash/cowfiles/panda.cow
