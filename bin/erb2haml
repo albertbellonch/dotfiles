@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+files = ARGV
+
+files.each do |x|
+  if x.split(".").last.downcase == "erb"
+    `html2haml #{x} #{(x.split('.')[0..-2] << 'haml').join('.')}`
+    puts "Converted #{x} to HAML"
+  end
+end
