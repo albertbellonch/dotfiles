@@ -1,0 +1,52 @@
+# -------------------------------------------------------------------
+# PS1
+# -------------------------------------------------------------------
+function __git_dirty {
+  git diff --quiet HEAD &>/dev/null
+  [ $? == 1 ] && echo "!"
+}
+
+function __git_branch {
+  __git_ps1 "(%s)"
+}
+
+function __my_rvm_ruby_version {
+  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+  [ "$gemset" != "" ] && gemset="@$gemset"
+  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+  [ "$version" == "1.8.7" ] && version=""
+  local full="$version$gemset"
+  [ "$full" != "" ] && echo "$full "
+}
+
+# via http://tammersaleh.com/posts/a-better-rvm-bash-prompt
+bash_prompt() {
+  local NONE="\[\033[0m\]"    # unsets color to term's fg color
+
+  # regular colors
+  local K="\[\033[0;30m\]"    # black
+  local R="\[\033[0;31m\]"    # red
+  local G="\[\033[0;32m\]"    # green
+  local Y="\[\033[0;33m\]"    # yellow
+  local B="\[\033[0;34m\]"    # blue
+  local M="\[\033[0;35m\]"    # magenta
+  local C="\[\033[0;36m\]"    # cyan
+  local W="\[\033[0;37m\]"    # white
+
+  local UC=$W                 # user's color
+  [ $UID -eq "0" ] && UC=$R   # root's color
+
+  export PS1="\[\e[33;1m\]\u@\[\e[36;1m\]\h\[\e[0m\]:$W\$(__my_rvm_ruby_version)$Y\w $R\$(__git_branch)$C\$(__git_dirty)${NONE}$ "
+}
+
+bash_prompt
+unset bash_prompt
+
+# -------------------------------------------------------------------
+# MESSAGES
+# -------------------------------------------------------------------
+
+uptime
+echo "Welcome back, Albert!"
+pwd
+fortune | cowsay -f small.cow
