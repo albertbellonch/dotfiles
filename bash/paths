@@ -1,7 +1,2 @@
-export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="~/code/dotfiles:~/bin:~/.bin:/usr/local/homebrew/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-export JAVA_HOME=/Library/Java/Home
-export CATALINA_HOME=/Library/Tomcat/Home
-export MAGICK_HOME="/Library/ImageMagick-6.6.7"
-export PATH="$MAGICK_HOME/bin:$PATH"
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"
