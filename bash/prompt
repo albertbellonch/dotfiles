@@ -48,4 +48,4 @@ unset bash_prompt
 
 uptime
 echo "Welcome back, Albert!"
-fortune | cowsay -f code/dotfiles/bash/cowfiles/panda.cow
+fortune | cowsay -f code/dotfiles/bash/cowfiles/mediumpanda.cow
