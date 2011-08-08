@@ -1,5 +1,5 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias be='bundle exec'
-alias bea='be autotest'
+alias bea='be autotest -fc'
 alias int='be rspec spec/integration/'
 alias bake='be rake'
