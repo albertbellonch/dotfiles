@@ -47,5 +47,5 @@ unset bash_prompt
 # -------------------------------------------------------------------
 
 uptime
-echo "Welcome back, Albert!" | lolcat
+echo "Welcome back, Albert!" | lolcat
 fortune | cowsay -f code/dotfiles/bash/cowfiles/mediumpanda.cow | lolcat
