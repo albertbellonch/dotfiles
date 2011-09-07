@@ -1,8 +1,10 @@
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias glc="git log --graph --color --date=relative --stat"
 alias gph='git push'
+alias gplh="gpl;gph"
 alias gphh='git push heroku master'
 alias gph2='gph; gphh'
+alias gplh2='gpl; gph; gphh'
 alias gpl='git pull --rebase'
 alias gd='git diff'
 alias gc='git commit -v'
@@ -14,4 +16,3 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias ga="git add"
 alias glog="git log --decorate --graph"
 alias gr="git remote"
-alias gplh="gpl;gph"
