@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+# Get URL
+unless ARGV.length == 2
+  puts "No URL or num provided."
+  exit
+else
+  BASE_URL = ARGV[0]
+  NUM = ARGV[1].to_i
+end
+
+# Get web content
+NUM.times do |i|
+  `wget #{BASE_URL}-#{i}.jpg`
+end
