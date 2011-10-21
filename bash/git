@@ -18,3 +18,4 @@ alias glog="git log --decorate --graph"
 alias gr="git remote"
 alias gf='git fetch'
 alias gcl='git clone'
+alias gm="git merge"
