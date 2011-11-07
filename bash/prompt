@@ -19,7 +19,7 @@ function __my_rvm_ruby_version {
 }
 
 function __anchor {
-  echo "⚡"
+  echo ""
 }
 
 # via http://tammersaleh.com/posts/a-better-rvm-bash-prompt
