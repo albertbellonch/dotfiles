@@ -18,6 +18,10 @@ function __my_rvm_ruby_version {
   [ "$full" != "" ] && echo "$full "
 }
 
+function __anchor {
+  echo "⚡"
+}
+
 # via http://tammersaleh.com/posts/a-better-rvm-bash-prompt
 bash_prompt() {
   local NONE="\[\033[0m\]"    # unsets color to term's fg color
@@ -35,7 +39,7 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  export PS1="\[\e[33;1m\]\u@\[\e[36;1m\]\h\[\e[0m\]:$W\$(__my_rvm_ruby_version)$Y\w $R\$(__git_branch)$C\$(__git_dirty)${NONE}$ "
+  export PS1="\[\e[33;1m\]\u@\[\e[36;1m\]\h\[\e[0m\]:$W\$(__my_rvm_ruby_version)$Y\w $R\$(__git_branch)$C\$(__git_dirty)${NONE}$G\$(__anchor)${NONE} "
 }
 
 bash_prompt
