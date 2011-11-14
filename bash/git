@@ -20,4 +20,4 @@ alias gf='git fetch'
 alias gcl='git clone'
 alias gm="git merge"
 alias grm="git rebase master"
-alias gpr="gco production; grm; gco master"
+alias gpr="gco production; grm; gph; gco master"
