@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+if ARGV.length != 1
+  puts "Please provide a branch name."
+  exit
+end
+
+branch_name = ARGV[0]
+`git checkout master` # checkout to master
+puts "Removing branch #{branch_name}..."
+`git branch -D #{branch_name}` # delete local branch
+`git push origin :#{branch_name}` # delete remote branch

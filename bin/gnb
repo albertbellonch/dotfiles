@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+if ARGV.length != 1
+  puts "Please provide a branch name."
+  exit
+end
+
+branch_name = ARGV[0]
+puts "Creating branch #{branch_name}..."
+`git branch #{branch_name}` # create local branch
+`git push -u origin #{branch_name}` # push to remote
+`git checkout #{branch_name}` # checkout to there
