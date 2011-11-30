@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+if ARGV.length != 1
+  puts "Please provide a process name."
+  exit
+end
+
+puts `ps -e | grep "#{ARGV[0]}"`
