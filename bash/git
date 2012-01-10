@@ -21,3 +21,4 @@ alias gcl='git clone'
 alias gm="git merge"
 alias grm="git rebase master"
 alias gpr="gco production; grm; gph; gco master"
+alias gcm="git shortlog -s -n"
