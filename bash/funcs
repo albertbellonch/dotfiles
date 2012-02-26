@@ -1,0 +1,27 @@
+# BD-related, by @rogercampos
+
+load_pg_dump () {
+  if [ -z "$1" ]; then
+    echo "Tell me the target database"
+    return 1
+  fi
+  if [ -z "$2" ]; then
+    echo "Tell me the sql file to dump"
+    return 1
+  fi
+
+  psql -U postgres -d $1 -f $2
+}
+
+load_mysql_dump () {
+  if [ -z "$1" ]; then
+    echo "Tell me the target database"
+    return 1
+  fi
+  if [ -z "$2" ]; then
+    echo "Tell me the sql file to dump"
+    return 1
+  fi
+
+  mysql -u root $1 < $2
+}
