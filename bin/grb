@@ -6,6 +6,10 @@ if ARGV.length != 1
 end
 
 branch_name = ARGV[0]
+if branch_name == "master"
+  puts "No way you're deleting master"
+  exit
+end
 `git checkout master` # checkout to master
 puts "Removing branch #{branch_name}..."
 `git branch -D #{branch_name}` # delete local branch
