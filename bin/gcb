@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+if ARGV.length != 2
+  puts "Please provide the old and new branch names."
+  exit
+end
+
+old_branch_name = ARGV[0]
+new_branch_name = ARGV[1]
+puts "Renaming branch #{old_branch_name} into #{new_branch_name}..."
+`git branch -m #{old_branch_name} #{new_branch_name}` # rename local branch
+`git push origin :#{old_branch_name}` # delete old remote branch
+`git push origin #{new_branch_name}` # create new remote branch
