@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+if ARGV.length > 1
+  puts "Please provide at most one parameter"
+  exit
+end
+
+# Generate key
+DEFAULT = 20
+size = ARGV.length == 1 ? ARGV[0].to_i : DEFAULT
+new_key = size.times.map do
+  ((rand(2)==1?65:97) + rand(25)).chr
+end.join
+
+# Output
+puts "-------------------------"
+puts "New key with #{size} chars:"
+puts "-------------------------"
+puts new_key
