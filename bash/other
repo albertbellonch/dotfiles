@@ -1,5 +1,0 @@
-alias m='mvim .'
-alias mc='memcached -d -P pidfile -l localhost'
-alias h='ghci'
-alias dp='cap production deploy'
-alias dpm='cap production deploy:migrations'

@@ -1,2 +1,0 @@
-export PATH="~/code/dotfiles:~/code/dotfiles/bin:~/bin:~/.bin:/usr/local/homebrew/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
