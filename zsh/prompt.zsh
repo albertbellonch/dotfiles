@@ -42,8 +42,15 @@ git_dirty() {
   then
     echo ""
   else
-    lpos=$(git status -sb )
-    offset="%{$fg_bold[green]%}+1%{$reset_color%}"
+    rawpos=$(git status -sb )
+    if [[ $rawpos =~ '/.+\[([a-z]+)\ ([0-9]+).*' ]]
+    then
+      pos=$(echo $match | sed 's/ //' | sed 's/ahead/+/' | sed 's/behind/-/')
+    else
+      pos=""
+    fi
+
+    offset="%{$fg_bold[green]%}$pos%{$reset_color%}"
 
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
