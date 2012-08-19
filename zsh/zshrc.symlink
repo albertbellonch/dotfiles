@@ -4,6 +4,9 @@ export ZSH=$HOME/code/dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
+# use rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
 
@@ -19,4 +22,4 @@ autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-# for config_file ($ZSH/**/completion.sh) source $config_file
+#for config_file ($ZSH/**/completion.sh) source $config_file
