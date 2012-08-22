@@ -54,6 +54,7 @@ alias rc='rails c'
 alias rbp='rails_best_practices -f html .'
 
 # TESTING
+alias dbt='bake db:test:prepare'
 alias t='be rspec spec/'
 alias tt='bake db:migrate; bake db:test:prepare; t'
 alias tm='be rspec spec/models/'
