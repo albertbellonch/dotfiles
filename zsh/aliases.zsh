@@ -52,6 +52,7 @@ alias sr='rvmsudo unicorn_rails -p 80'
 alias rst='rails s thin'
 alias rc='rails c'
 alias rbp='rails_best_practices -f html .'
+alias sk='be sidekiq'
 
 # TESTING
 alias dbt='bake db:test:prepare'
