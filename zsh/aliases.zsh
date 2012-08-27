@@ -54,6 +54,10 @@ alias rc='rails c'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 
+# REDIS
+alias rds='redis-server'
+alias rdc='redis-cli'
+
 # TESTING
 alias dbt='bake db:test:prepare'
 alias t='be rspec spec/'
