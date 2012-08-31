@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+git_url = `git config --get remote.origin.url`
+unless git_url && git_url != ""
+  puts "Not a git repository or no remote.origin.url set"
+  exit
+end
+
+github_url = git_url
+              .gsub("git@github.com:", "https://github.com/")
+              .gsub(/\.git$/, "")
+              .gsub("\n", "")
+
+print "Opening #{github_url}..."
+`open #{github_url}`
+print " OK\n"
