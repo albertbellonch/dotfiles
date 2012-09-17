@@ -30,6 +30,7 @@ alias gpr="gco production; grm; gph; gco master"
 alias gps="gco staging; grm; gph; gco master"
 alias gcm="git shortlog -s -n"
 alias gw="git show"
+alias gcp='git cherry-pick'
 
 # RVM
 alias 187='rvm use 1.8.7'
