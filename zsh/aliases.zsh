@@ -84,5 +84,8 @@ alias dpm='cap production deploy:migrations'
 # MEMCACHED
 alias mc='memcached -d -P pidfile -l localhost'
 
-# MISC
+# SYSTEM
 alias l='ls -lah'
+
+# AWESOME
+alias somebody='afplay ~/code/dotfiles/audio/somebody.mp3'
