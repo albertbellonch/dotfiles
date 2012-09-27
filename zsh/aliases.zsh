@@ -87,5 +87,9 @@ alias mc='memcached -d -P pidfile -l localhost'
 # SYSTEM
 alias l='ls -lah'
 
+# IMAGE OPTIMIZATION
+alias po='optipng -o7'
+alias jo='jpegoptim --strip-all'
+
 # AWESOME
 alias somebody='afplay ~/code/dotfiles/audio/somebody.mp3'
