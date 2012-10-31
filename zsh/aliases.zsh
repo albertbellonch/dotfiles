@@ -94,3 +94,4 @@ alias jo='jpegoptim --strip-all'
 
 # AWESOME
 alias somebody='afplay ~/code/dotfiles/audio/somebody.mp3'
+alias k='newkey'
