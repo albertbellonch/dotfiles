@@ -32,6 +32,7 @@ alias gcm="git shortlog -s -n"
 alias gw="git show"
 alias gcp='git cherry-pick'
 alias gcf='git clean -f'
+alias gg='git grep'
 
 # RVM
 alias 187='rvm use 1.8.7'
@@ -87,6 +88,7 @@ alias mc='memcached -d -P pidfile -l localhost'
 
 # SYSTEM
 alias l='ls -lah'
+alias tx='tar xzvf'
 
 # IMAGE OPTIMIZATION
 alias po='optipng -o7'
