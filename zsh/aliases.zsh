@@ -33,6 +33,7 @@ alias gw="git show"
 alias gcp='git cherry-pick'
 alias gcf='git clean -f'
 alias gg='git grep'
+alias gbs='twig'
 
 # RVM
 alias 187='rvm use 1.8.7'
@@ -82,6 +83,8 @@ alias m='mvim .'
 # CAPISTRANO
 alias dp='cap production deploy'
 alias dpm='cap production deploy:migrations'
+alias ds='cap staging deploy'
+alias dsm='cap staging deploy:migrations'
 
 # MEMCACHED
 alias mc='memcached -d -P pidfile -l localhost'
