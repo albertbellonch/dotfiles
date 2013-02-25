@@ -34,6 +34,8 @@ alias gcp='git cherry-pick'
 alias gcf='git clean -f'
 alias gg='git grep'
 alias gbs='twig'
+alias gll='gco master; gpl; gl'
+alias gphrd='gph; gpr; dp'
 
 # RVM
 alias 187='rvm use 1.8.7'
@@ -68,6 +70,10 @@ alias t='be rspec spec/'
 alias tt='bake db:migrate; bake db:test:prepare; t'
 alias tm='be rspec spec/models/'
 alias ti='be rspec spec/integration/'
+alias zt='zeus t'
+alias ztt='zeus tt'
+alias ztm='zeus tm'
+alias zti='zeus ti'
 alias cc='be cucumber'
 
 # THINKING SPHINX
