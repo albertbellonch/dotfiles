@@ -35,7 +35,8 @@ alias gcf='git clean -f'
 alias gg='git grep'
 alias gbs='twig'
 alias gll='gco master; gpl; gl'
-alias gphrd='gph; gpr; dp'
+alias gphrp='gph; gpr; dp'
+alias gphrs='gph; gps; ds'
 
 # RVM
 alias 187='rvm use 1.8.7'
