@@ -88,6 +88,7 @@ alias tsr='bake thinking_sphinx:rebuild'
 alias m='mvim .'
 
 # CAPISTRANO
+alias d='cap deploy'
 alias dp='cap production deploy'
 alias dpm='cap production deploy:migrations'
 alias ds='cap staging deploy'
