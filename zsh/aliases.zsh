@@ -105,6 +105,9 @@ alias tx='tar xzvf'
 alias po='optipng -o7'
 alias jo='jpegoptim --strip-all'
 
+# LINES OF CODE
+alias lr='find . -name "*.rb" -print | xargs wc -l | tail -n 1'
+
 # AWESOME
 alias somebody='afplay ~/code/dotfiles/audio/somebody.mp3'
 alias k='newkey'
