@@ -60,6 +60,7 @@ alias rst='rails s thin'
 alias rc='rails c'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
+alias seed='bake db:seed'
 
 # REDIS
 alias rds='redis-server'
