@@ -10,3 +10,6 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+
+"" Shortcut for switch.vim
+nnoremap - :Switch<cr>
