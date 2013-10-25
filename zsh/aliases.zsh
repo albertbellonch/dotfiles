@@ -96,6 +96,10 @@ alias dpm='cap production deploy:migrations'
 alias ds='cap staging deploy'
 alias dsm='cap staging deploy:migrations'
 
+# CORDOVA
+alias cb='cordova build'
+alias cr='cordova run'
+
 # MEMCACHED
 alias mc='memcached -d -P pidfile -l localhost'
 

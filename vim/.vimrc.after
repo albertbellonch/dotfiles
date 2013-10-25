@@ -13,3 +13,7 @@ noremap! <Right> <Esc>
 
 "" Shortcut for switch.vim
 nnoremap - :Switch<cr>
+
+"" Shortcut for splitjoin.vim
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
