@@ -56,6 +56,7 @@ alias rs='rails s'
 alias s='rvmsudo rails s -p 80'
 alias st='rvmsudo rails s thin -p 80'
 alias sr='rvmsudo unicorn_rails -p 80'
+alias rsu='rvmsudo rails s unicorn -p 80'
 alias rst='rails s thin'
 alias rc='rails c'
 alias rbp='rails_best_practices -f html .'
@@ -106,6 +107,8 @@ alias mc='memcached -d -P pidfile -l localhost'
 # SYSTEM
 alias l='ls -lah'
 alias tx='tar xzvf'
+alias pr='ps -e | grep'
+alias dc='sudo nmap -sn 192.168.1.2-254'
 
 # IMAGE OPTIMIZATION
 alias po='optipng -o7'
