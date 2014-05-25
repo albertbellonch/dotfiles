@@ -1,8 +1,8 @@
 # Own bins
-export PATH="/Users/albert/code/dotfiles/bin:$PATH"
+export PATH="$PATH:/Users/albert/code/dotfiles/bin"
 
 # MySQL path
-export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="$PATH:/usr/local/mysql/bin"
 
 # Fix RVM issue
 export rvmsudo_secure_path=1

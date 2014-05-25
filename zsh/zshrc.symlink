@@ -5,7 +5,7 @@ export ZSH=$HOME/code/dotfiles
 export PROJECTS=~/code
 
 # use rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source "$HOME/.rvm/scripts/rvm"
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -23,11 +23,13 @@ compinit
 
 # load every completion after autocomplete loads
 #for config_file ($ZSH/**/completion.sh) source $config_file
+#
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+ANT_HOME=/usr/local/opt/ant
+ANDROID_HOME=/usr/local/opt/android-sdk
+ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
+ANDROID_TOOLS=$ANDROID_HOME/tools
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=/usr/local/share/npm/bin:$PATH
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:$PATH"
+PATH=$PATH:/usr/local/share/npm/bin
+PATH=$PATH:$JAVA_HOME:$ANT_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS
