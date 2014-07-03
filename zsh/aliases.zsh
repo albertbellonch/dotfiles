@@ -66,6 +66,10 @@ alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 alias seed='bake db:seed'
 
+# POSTGRESQL
+alias psta='lunchy start postgres'
+alias psto='lunchy stop postgres'
+
 # REDIS
 alias rds='redis-server'
 alias rdc='redis-cli'
