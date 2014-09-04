@@ -65,6 +65,7 @@ alias rcs='rails c --sandbox'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 alias seed='bake db:seed'
+alias ggrep='more Gemfile.lock | grep '
 
 # POSTGRESQL
 alias psta='lunchy start postgres'
