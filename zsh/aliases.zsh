@@ -53,19 +53,26 @@ alias be='b exec'
 alias bea='be autotest -c'
 alias bake='be rake'
 
-# RAILS
+# RAILS & SPRING
 alias rs='rails s'
 alias s='rvmsudo rails s -p 80'
-alias st='rvmsudo rails s thin -p 80'
+alias st='rvmsudo spring rails s thin -p 80'
 alias sr='rvmsudo unicorn_rails -p 80'
 alias rsu='rvmsudo rails s unicorn -p 80'
 alias rst='rails s thin'
-alias rc='rails c'
+alias rc='spring rails c'
 alias rcs='rails c --sandbox'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 alias seed='bake db:seed'
 alias ggrep='more Gemfile.lock | grep '
+
+alias sp='spring'
+alias sps='spring status'
+alias spst='spring stop'
+alias spr='spring rails'
+alias spk='spring rake'
+alias spt='spring rspec'
 
 # POSTGRESQL
 alias psta='lunchy start postgres'
@@ -82,6 +89,11 @@ alias tt='bake db:migrate; bake db:test:prepare; t'
 alias tm='be rspec spec/models/'
 alias ti='be rspec spec/integration/'
 alias ta='be rspec spec/api/'
+alias cc='be cucumber'
+
+# SPRING
+
+# ZEUS
 alias zs='zeus start'
 alias zt='zeus rspec'
 alias zte='zeus rspec --example'
@@ -89,7 +101,6 @@ alias zc='zeus console'
 alias ztt='zeus tt'
 alias ztm='zeus tm'
 alias zti='zeus ti'
-alias cc='be cucumber'
 
 # THINKING SPHINX
 alias tss='bake thinking_sphinx:start'

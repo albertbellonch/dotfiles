@@ -1,6 +1,9 @@
 # Own bins
 export PATH="$PATH:/Users/albert/code/dotfiles/bin"
 
+# Rails bins from Quipu
+export PATH="$PATH:/Users/albert/code/quipuapp/bin"
+
 # MySQL path
 export PATH="$PATH:/usr/local/mysql/bin"
 
