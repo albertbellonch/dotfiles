@@ -65,7 +65,7 @@ alias rcs='rails c --sandbox'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 alias seed='bake db:seed'
-alias ggrep='more Gemfile.lock | grep '
+alias gfg='more Gemfile.lock | grep '
 
 alias sp='spring'
 alias sps='spring status'
@@ -73,6 +73,10 @@ alias spst='spring stop'
 alias spr='spring rails'
 alias spk='spring rake'
 alias spt='spring rspec'
+
+# JEKYLL
+alias jb='jekyll build'
+alias js='jekyll serve'
 
 # POSTGRESQL
 alias psta='lunchy start postgres'
@@ -145,3 +149,4 @@ alias k='newkey'
 alias gpd='gplh; gpr; dp'
 alias lucky='open "/Users/albert/Music/iTunes/iTunes Media/Music/Daft Punk/Get Lucky/1-01 Get Lucky (Radio Edit).m4a"'
 alias giorgio='open "/Users/albert/Music/iTunes/iTunes Media/Music/Daft Punk/Random Access Memories/03 Giorgio by Moroder.mp3"'
+alias cerdi='open "https://www.youtube.com/watch?v=rNjbXg2mBsQ"'
