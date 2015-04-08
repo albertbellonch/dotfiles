@@ -76,7 +76,7 @@ alias spk='spring rake'
 alias spt='spring rspec'
 
 # EMBER
-alias es='ember server'
+alias es='sudo ember server -p 80'
 
 # JEKYLL
 alias jb='jekyll build'
