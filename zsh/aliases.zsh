@@ -53,7 +53,7 @@ alias be='b exec'
 alias bea='be autotest -c'
 alias bake='be rake'
 
-# RAILS & SPRING
+# RAILS
 alias rs='rails s'
 alias s='rvmsudo rails s -p 80'
 alias st='rvmsudo spring rails s thin -p 80'
@@ -67,12 +67,16 @@ alias sk='be sidekiq'
 alias seed='bake db:seed'
 alias gfg='more Gemfile.lock | grep '
 
+# SPRING
 alias sp='spring'
 alias sps='spring status'
 alias spst='spring stop'
 alias spr='spring rails'
 alias spk='spring rake'
 alias spt='spring rspec'
+
+# EMBER
+alias es='ember server'
 
 # JEKYLL
 alias jb='jekyll build'
