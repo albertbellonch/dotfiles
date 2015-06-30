@@ -27,7 +27,7 @@ directory_name(){
 }
 
 git_branch(){
-  branch_name=$(git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  branch_name=$(git symbolic-ref HEAD 2>/dev/null | sed 's:refs/heads/::' )
   if [[ $branch_name == "" ]]
   then
     echo ""
