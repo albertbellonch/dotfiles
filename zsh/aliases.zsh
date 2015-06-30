@@ -54,8 +54,9 @@ alias bea='be autotest -c'
 alias bake='be rake'
 
 # RAILS
-alias rs='rails s'
+#alias rs='rails s'
 alias s='rvmsudo rails s -p 80'
+alias rs='spring rails s thin -p 8080'
 alias st='rvmsudo spring rails s thin -p 80'
 alias sr='rvmsudo unicorn_rails -p 80'
 alias rsu='rvmsudo rails s unicorn -p 80'
@@ -66,6 +67,7 @@ alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
 alias seed='bake db:seed'
 alias gfg='more Gemfile.lock | grep '
+alias clr='sudo rm -rf tmp/cache* public/uploads* public/system/uploads*'
 
 # SPRING
 alias sp='spring'
@@ -76,11 +78,14 @@ alias spk='spring rake'
 alias spt='spring rspec'
 
 # EMBER
-alias es='sudo ember server -p 80'
+alias es='sudo ember server -p 80 --proxy http://api.getquipu.dev:8080'
 
 # JEKYLL
 alias jb='jekyll build'
 alias js='jekyll serve'
+
+# JADE
+alias jw='./jade-watch'
 
 # POSTGRESQL
 alias psta='lunchy start postgres'
@@ -119,6 +124,9 @@ alias tsr='bake thinking_sphinx:rebuild'
 
 # VIM
 alias m='mvim .'
+
+# ATOM
+alias a='atom .'
 
 # CAPISTRANO
 alias d='cap deploy'

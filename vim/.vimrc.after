@@ -17,3 +17,6 @@ nnoremap - :Switch<cr>
 "" Shortcut for splitjoin.vim
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+"" No fucking swap
+set noswapfile
