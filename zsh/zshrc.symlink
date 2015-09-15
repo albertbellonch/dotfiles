@@ -32,3 +32,7 @@ ANDROID_TOOLS=$ANDROID_HOME/tools
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$JAVA_HOME:$ANT_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS
+
+# nvm stuff
+export NVM_DIR="/Users/albert/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
