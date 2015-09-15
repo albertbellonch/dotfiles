@@ -51,31 +51,25 @@ alias 193f='rvm use 1.9.3-p0-perf'
 alias b='bundle'
 alias be='b exec'
 alias bea='be autotest -c'
-alias bake='be rake'
+alias brake='bin/rake'
+alias brspec='bin/rspec'
+alias brails='bin/rails'
 
 # RAILS
 #alias rs='rails s'
-alias s='rvmsudo rails s -p 80'
-alias rs='spring rails s thin -p 8080'
-alias st='rvmsudo spring rails s thin -p 80'
+alias s='rvmsudo brails s -p 80'
+alias rs='brails s thin -p 8080'
+alias st='rvmsudo brails s thin -p 80'
 alias sr='rvmsudo unicorn_rails -p 80'
-alias rsu='rvmsudo rails s unicorn -p 80'
-alias rst='rails s thin'
-alias rc='spring rails c'
-alias rcs='rails c --sandbox'
+alias rsu='rvmsudo brails s unicorn -p 80'
+alias rst='brails s thin'
+alias rc='brails c'
+alias rcs='brails c --sandbox'
 alias rbp='rails_best_practices -f html .'
 alias sk='be sidekiq'
-alias seed='bake db:seed'
+alias seed='brake db:seed'
 alias gfg='more Gemfile.lock | grep '
 alias clr='sudo rm -rf tmp/cache* public/uploads* public/system/uploads*'
-
-# SPRING
-alias sp='spring'
-alias sps='spring status'
-alias spst='spring stop'
-alias spr='spring rails'
-alias spk='spring rake'
-alias spt='spring rspec'
 
 # EMBER
 alias es='sudo ember server -p 80 --proxy http://api.getquipu.dev:8080'
@@ -96,15 +90,13 @@ alias rds='redis-server'
 alias rdc='redis-cli'
 
 # TESTING
-alias dbt='bake db:test:prepare'
+alias dbt='brake db:test:prepare'
 alias t='be rspec spec/'
-alias tt='bake db:migrate; bake db:test:prepare; t'
+alias tt='brake db:migrate; brake db:test:prepare; t'
 alias tm='be rspec spec/models/'
 alias ti='be rspec spec/integration/'
 alias ta='be rspec spec/api/'
 alias cc='be cucumber'
-
-# SPRING
 
 # ZEUS
 alias zs='zeus start'
@@ -116,11 +108,11 @@ alias ztm='zeus tm'
 alias zti='zeus ti'
 
 # THINKING SPHINX
-alias tss='bake thinking_sphinx:start'
-alias tsp='bake thinking_sphinx:stop'
-alias tsi='bake thinking_sphinx:index'
-alias tsc='bake thinking_sphinx:configure'
-alias tsr='bake thinking_sphinx:rebuild'
+alias tss='brake thinking_sphinx:start'
+alias tsp='brake thinking_sphinx:stop'
+alias tsi='brake thinking_sphinx:index'
+alias tsc='brake thinking_sphinx:configure'
+alias tsr='brake thinking_sphinx:rebuild'
 
 # VIM
 alias m='mvim .'
