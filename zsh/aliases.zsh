@@ -10,7 +10,7 @@ alias gphh='git push heroku master'
 alias gph2='gph; gphh'
 alias gplh2='gpl; gph; gphh'
 alias gpl='git pull --rebase'
-alias gd='git diff'
+alias gd='git diff --compaction-heuristic'
 alias gc='git commit -v'
 alias gca='git commit -a'
 alias gco='git checkout'
@@ -28,6 +28,7 @@ alias gcl='git clone'
 alias gm="git merge"
 alias gmm="git merge master"
 alias grm="git rebase master"
+alias grc="git rebase --continue"
 alias gpr="gco production; gm master; gph origin production; gco master"
 alias gps="gco staging; gm master; gph origin staging; gco master"
 alias gcm="git shortlog -s -n"
@@ -57,9 +58,9 @@ alias brails='bin/rails'
 
 # RAILS
 #alias rs='rails s'
-alias s='rvmsudo brails s -p 80'
+alias s='rvmsudo bin/rails s -p 80'
 alias rs='brails s thin -p 8080'
-alias st='rvmsudo brails s thin -p 80'
+alias st='rvmsudo bin/rails s thin -p 80'
 alias sr='rvmsudo unicorn_rails -p 80'
 alias rsu='rvmsudo brails s unicorn -p 80'
 alias rst='brails s thin'
@@ -134,11 +135,19 @@ alias cr='cordova run'
 # MEMCACHED
 alias mc='memcached -d -P pidfile -l localhost'
 
+# DOCKER
+alias dm='docker-machine'
+alias dc='docker-compose'
+
 # SYSTEM
 alias l='ls -lah'
 alias tx='tar xzvf'
 alias pr='ps -e | grep'
 alias dc='sudo nmap -sn 192.168.1.2-254'
+
+# MAC OS X
+alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+alias out='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 # IMAGE OPTIMIZATION
 alias po='optipng -o7'
@@ -154,3 +163,4 @@ alias gpd='gplh; gpr; dp'
 alias lucky='open "/Users/albert/Music/iTunes/iTunes Media/Music/Daft Punk/Get Lucky/1-01 Get Lucky (Radio Edit).m4a"'
 alias giorgio='open "/Users/albert/Music/iTunes/iTunes Media/Music/Daft Punk/Random Access Memories/03 Giorgio by Moroder.mp3"'
 alias cerdi='open "https://www.youtube.com/watch?v=rNjbXg2mBsQ"'
+alias im='instantmusic'
