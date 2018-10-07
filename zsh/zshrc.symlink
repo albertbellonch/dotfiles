@@ -4,6 +4,13 @@ export ZSH=$HOME/code/dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
+# Setup rbenv
+eval "$(rbenv init -)"
+
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
 
@@ -17,10 +24,3 @@ fi
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
-
-# Setup rbenv
-eval "$(rbenv init -)"
-
-# Setup NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
