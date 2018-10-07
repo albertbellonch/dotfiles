@@ -48,4 +48,4 @@ bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
 # Editor is MacVim
-export EDITOR=mvim
+export EDITOR=vim

@@ -10,7 +10,7 @@ alias gphh='git push heroku master'
 alias gph2='gph; gphh'
 alias gplh2='gpl; gph; gphh'
 alias gpl='git pull --rebase'
-alias gd='git diff --compaction-heuristic'
+alias gd='git diff'
 alias gc='git commit -v'
 alias gca='git commit -a'
 alias gco='git checkout'
@@ -60,7 +60,7 @@ alias brails='bin/rails'
 #alias rs='rails s'
 alias s='rvmsudo bin/rails s -p 80'
 alias rs='brails s thin -p 8080'
-alias st='rvmsudo bin/rails s thin -p 80'
+alias st='rvmsudo bin/rails s thin -p 80 -b 0.0.0.0'
 alias sr='rvmsudo unicorn_rails -p 80'
 alias rsu='rvmsudo brails s unicorn -p 80'
 alias rst='brails s thin'
@@ -116,7 +116,7 @@ alias tsc='brake thinking_sphinx:configure'
 alias tsr='brake thinking_sphinx:rebuild'
 
 # VIM
-alias m='mvim .'
+alias v='vim .'
 
 # ATOM
 alias a='atom .'
@@ -127,6 +127,25 @@ alias dp='cap production deploy'
 alias dpm='cap production deploy:migrations'
 alias ds='cap staging deploy'
 alias dsm='cap staging deploy:migrations'
+
+# QUIPU INFRASTRUCTURE
+
+# Development
+alias qp='bin/quipo'
+alias qps='qp setup'
+alias qpd='qp devenv'
+alias qmq='sudo mount -t nfs  -o noatime,noowners,soft,vers=3,resvport getquipu.devenv:/mnt/quipuapp/ ~/code/quipuapp'
+alias quq='sudo umount  ~/code/quipuapp'
+alias qmc='sudo mount -t nfs  -o noatime,noowners,soft,vers=3,resvport getquipu.devenv:/mnt/cerebro/ ~/code/cerebro'
+alias quc='sudo umount  ~/code/cerebro'
+
+# Staging
+alias dis='./bin/quipo deploy infrastructure -t staging'
+alias dqs='./bin/quipo deploy quipuapp -t staging -b feature/new_inf'
+alias dcs='./bin/quipo deploy cerebro -t staging'
+
+# FAYE
+alias fy='rackup faye.ru -E production -s thin -o 0.0.0.0'
 
 # CORDOVA
 alias cb='cordova build'
