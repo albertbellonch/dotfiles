@@ -4,12 +4,18 @@ export ZSH=$HOME/code/dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
+# Add rbenv bin to path
+export PATH="~/.rbenv/bin:$PATH"
+
 # Setup rbenv
 eval "$(rbenv init -)"
 
 # Setup NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Set git language to English
+alias git='LANG=en_US git'
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -20,6 +26,16 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
+# Setup Android Studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+# Setup Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
