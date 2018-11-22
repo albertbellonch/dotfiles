@@ -4,11 +4,9 @@ alias reload!='. ~/.zshrc'
 # GIT
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias glc="git log --graph --color --date=relative --stat"
+alias glog="git log --decorate --graph"
 alias gph='git push'
 alias gplh="gpl;gph"
-alias gphh='git push heroku master'
-alias gph2='gph; gphh'
-alias gplh2='gpl; gph; gphh'
 alias gpl='git pull --rebase'
 alias gd='git diff'
 alias gc='git commit -v'
@@ -17,11 +15,11 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gbm='git branch --merged'
 alias gbn='git branch --no-merged'
-alias grv='git revert'
+alias gbd='git branch -D'
+alias gv='git revert'
 alias gs='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias ga="git add"
-alias glog="git log --decorate --graph"
 alias gr="git remote"
 alias gf='git fetch'
 alias gcl='git clone'
@@ -29,17 +27,12 @@ alias gm="git merge"
 alias gmm="git merge master"
 alias grm="git rebase master"
 alias grc="git rebase --continue"
-alias gpr="gco production; gm master; gph origin production; gco master"
-alias gps="gco staging; gm master; gph origin staging; gco master"
 alias gcm="git shortlog -s -n"
 alias gw="git show"
 alias gcp='git cherry-pick'
 alias gcf='git clean -f'
 alias gg='git grep'
 alias gbs='twig'
-alias gll='gco master; gpl; gl'
-alias gphrp='gph; gpr; dp'
-alias gphrs='gph; gps; ds'
 
 # RVM
 alias 187='rvm use 1.8.7'
