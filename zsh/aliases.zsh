@@ -16,7 +16,7 @@ alias gcom='gco master'
 alias gb='git branch'
 alias gbm='git branch --merged'
 alias gbn='git branch --no-merged'
-alias gbd='git branch -D'
+alias gbd='gco master; git branch -D'
 alias gv='git revert'
 alias gs='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
@@ -71,7 +71,7 @@ alias es='sudo ember server -p 80 --proxy http://api.getquipu.dev:8080'
 
 # JEKYLL
 alias jb='jekyll build'
-alias js='jekyll serve'
+alias js='bundle exec jekyll serve --livereload'
 
 # JADE
 alias jw='./jade-watch'
