@@ -68,7 +68,7 @@ precmd() {
 }
 
 uptime
-if [ $DEVENV = true ]
+if [ $DEVENV ]
 then
   # nothing?
 else

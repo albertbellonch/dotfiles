@@ -1,11 +1,17 @@
-# Own bins
-export PATH="$PATH:/Users/albert/code/dotfiles/bin"
+if [ $DEVENV ]
+then
+  # Own bins
+  export PATH="$PATH:/home/me/code/dotfiles/bin"
+else
+  # Own bins
+  export PATH="$PATH:/Users/albert/code/dotfiles/bin"
 
-# Rails bins from Quipu
-export PATH="$PATH:/Users/albert/code/quipuapp/bin"
+  # Rails bins from Quipu
+  export PATH="$PATH:/Users/albert/code/quipuapp/bin"
 
-# MySQL path
-export PATH="$PATH:/usr/local/mysql/bin"
+  # MySQL path
+  export PATH="$PATH:/usr/local/mysql/bin"
 
-# Fix RVM issue
-export rvmsudo_secure_path=1
+  # Fix RVM issue
+  export rvmsudo_secure_path=1
+fi
