@@ -73,5 +73,5 @@ then
   # nothing?
 else
   echo "Welcome back, Albert!" | lolcat
-  fortune | cowsay -f code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
+  fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
 fi
