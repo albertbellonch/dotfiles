@@ -49,8 +49,8 @@ else
 
   # Setup Fastlane
   export PATH="$HOME/.fastlane/bin:$PATH"
-
-  # initialize autocomplete here, otherwise functions won't be loaded
-  autoload -U compinit
-  compinit
 fi
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
