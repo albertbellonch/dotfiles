@@ -1,6 +1,6 @@
 if [ $DEVENV ]
 then
-  export ZSH=/home/me/code/dotfiles
+  export ZSH=$HOME/dotfiles
   export PROJECTS=/mnt
 else
   export ZSH=$HOME/code/dotfiles
