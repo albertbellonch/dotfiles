@@ -1,7 +1,7 @@
 if [ $DEVENV ]
 then
   # Own bins
-  export PATH="$PATH:/home/me/code/dotfiles/bin"
+  export PATH="$PATH:$HOME/dotfiles/bin"
 else
   # Own bins
   export PATH="$PATH:/Users/albert/code/dotfiles/bin"
