@@ -1,0 +1,4 @@
+# credit: https://blog.testdouble.com/posts/2016-11-18-reconciling-tmux-and-ssh-agent-forwarding/
+fixssh() {
+eval $(tmux show-env -s |grep '^SSH_')
+}
