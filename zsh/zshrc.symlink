@@ -16,7 +16,7 @@ else
 
   # Setup NVM
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
   # Set git language to English
@@ -30,8 +30,11 @@ if [ $DEVENV ]
 then
   # nothing
 else
-  # Rust
-  source $HOME/.cargo/env
+  # Brew
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  # ZSH autosuggestions
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # use .localrc for SUPER SECRET CRAP that you don't
   # want in your public, versioned repo.
