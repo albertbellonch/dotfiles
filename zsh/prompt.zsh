@@ -1,3 +1,5 @@
+alias reload!='. ~/.zshrc'
+
 autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
@@ -52,7 +54,7 @@ git_dirty() {
 
     offset="%{$fg_bold[green]%}$pos%{$reset_color%}"
 
-    if [[ $st == "nothing to commit (working directory clean)" ]]
+    if [[ $st == "nothing to commit, working tree clean" ]]
     then
       echo "$offset"
     else
@@ -68,10 +70,10 @@ precmd() {
 }
 
 uptime
-if [ $DEVENV ]
+
+echo "Welcome back, Albert!" | lolcat
+
+if ! [ $DEVENV ]
 then
-  # nothing?
-else
-  echo "Welcome back, Albert!" | lolcat
   fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
 fi
