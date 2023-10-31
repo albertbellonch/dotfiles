@@ -1,6 +1,3 @@
-# ZSH
-alias reload!='. ~/.zshrc'
-
 # GIT
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias glc="git log --graph --color --date=relative --stat"
