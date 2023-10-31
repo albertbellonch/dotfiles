@@ -71,9 +71,11 @@ precmd() {
 
 uptime
 
-echo "Welcome back, Albert!" | lolcat
 
-if ! [ $DEVENV ]
+if [ $DEVENV ]
+  echo "Welcome back, Albert!"
 then
+else
+  echo "Welcome back, Albert!" | lolcat
   fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
 fi
