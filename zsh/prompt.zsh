@@ -70,10 +70,6 @@ precmd() {
 }
 
 uptime
-if [ $DEVENV ]
-then
-  # nothing?
-else
-  echo "Welcome back, Albert!" | lolcat
-  fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
-fi
+
+echo "Welcome back, Albert!" | lolcat
+fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
