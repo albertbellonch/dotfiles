@@ -54,7 +54,7 @@ git_dirty() {
 
     offset="%{$fg_bold[green]%}$pos%{$reset_color%}"
 
-    if [[ $st == "nothing to commit (working directory clean)" ]]
+    if [[ $st == "nothing to commit, working tree clean" ]]
     then
       echo "$offset"
     else
