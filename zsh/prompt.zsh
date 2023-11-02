@@ -73,8 +73,8 @@ uptime
 
 
 if [ $DEVENV ]
-  echo "Welcome back, Albert!"
 then
+  echo "Welcome back, Albert!"
 else
   echo "Welcome back, Albert!" | lolcat
   fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
