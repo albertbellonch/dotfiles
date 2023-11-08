@@ -39,6 +39,11 @@ alias brake='bin/rake'
 alias brspec='bin/rspec'
 alias brails='bin/rails'
 
+# ELASTIC SEARCH
+alias ess='sudo systemctl status elasticsearch.service'
+alias est='sudo systemctl start elasticsearch.service'
+alias esp='sudo systemctl stop elasticsearch.service'
+
 # JEKYLL
 alias jb='jekyll build'
 alias js='bundle exec jekyll serve --livereload'
