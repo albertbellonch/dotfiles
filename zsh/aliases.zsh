@@ -39,6 +39,10 @@ alias brake='bin/rake'
 alias brspec='bin/rspec'
 alias brails='bin/rails'
 
+# RSPEC & RUBOCOP
+alias rb='bundle exec rubocop'
+alias rs='bundle exec rspec'
+
 # ELASTIC SEARCH
 alias ess='sudo systemctl status elasticsearch.service'
 alias est='sudo systemctl start elasticsearch.service'
