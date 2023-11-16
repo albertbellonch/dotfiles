@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+error_message = "Please provide a Rust file."
+
+if ARGV.length != 1
+  puts error_message
+  exit
+end
+
+source_filename = ARGV[0]
+unless source_filename
+  puts error_message
+  exit
+end
+
+`rustc #{source_filename}` # compile the file
+
+binary_filename = source_filename.gsub('.rs', '')
+
+if File.exist?(binary_filename)
+  puts `./#{binary_filename}`# execute binary if it exists
+end
