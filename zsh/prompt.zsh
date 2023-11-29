@@ -24,14 +24,13 @@ in() {
   echo "%{$fg_bold[white]%}:%{$reset_color%}"
 }
 
-directory_name(){
+directory_name() {
   echo "%{$fg_no_bold[yellow]%}%~%\/%{$reset_color%}"
 }
 
-git_branch(){
-  branch_name=$(git symbolic-ref HEAD 2>/dev/null | sed 's:refs/heads/::' )
-  if [[ $branch_name == "" ]]
-  then
+git_branch() {
+  branch_name=$(git symbolic-ref HEAD 2>/dev/null | sed 's:refs/heads/::')
+  if [[ $branch_name == "" ]]; then
     echo ""
   else
     echo "%{$fg_no_bold[red]%}($branch_name)%{$reset_color%}"
@@ -40,13 +39,11 @@ git_branch(){
 
 git_dirty() {
   st=$(git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
-  then
+  if [[ $st == "" ]]; then
     echo ""
   else
-    rawpos=$(git status -sb )
-    if [[ $rawpos =~ '/.+\[([a-z]+)\ ([0-9]+).*' ]]
-    then
+    rawpos=$(git status -sb)
+    if [[ $rawpos =~ '/.+\[([a-z]+)\ ([0-9]+).*' ]]; then
       pos=$(echo $match | sed 's/ //' | sed 's/ahead/+/' | sed 's/behind/-/')
     else
       pos=""
@@ -54,8 +51,7 @@ git_dirty() {
 
     offset="%{$fg_bold[green]%}$pos%{$reset_color%}"
 
-    if [[ $st == "nothing to commit, working tree clean" ]]
-    then
+    if [[ $st == "nothing to commit, working tree clean" ]]; then
       echo "$offset"
     else
       echo "$offset%{$fg_bold[yellow]%}•%{$reset_color%}"
@@ -71,9 +67,7 @@ precmd() {
 
 uptime
 
-
-if [ $DEVENV ]
-then
+if [ $DEVENV ]; then
   echo "Welcome back, Albert!"
 else
   echo "Welcome back, Albert!" | lolcat
