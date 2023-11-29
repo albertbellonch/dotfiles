@@ -43,13 +43,18 @@ git_dirty() {
     echo ""
   else
     rawpos=$(git status -sb)
-    if [[ $rawpos =~ '/.+\[([a-z]+)\ ([0-9]+).*' ]]; then
-      pos=$(echo $match | sed 's/ //' | sed 's/ahead/+/' | sed 's/behind/-/')
-    else
-      pos=""
+
+    # Detect being ahead
+    if [[ $rawpos =~ '/.+(ahead)\ ([0-9]+).*' ]]; then
+      pos=$(echo $match | sed 's/ //' | sed 's/ahead/+/')
+      offset="$offset%{$fg_bold[green]%}$pos%{$reset_color%}"
     fi
 
-    offset="%{$fg_bold[green]%}$pos%{$reset_color%}"
+    # Detect being behind
+    if [[ $rawpos =~ '/.+(behind)\ ([0-9]+).*' ]]; then
+      pos=$(echo $match | sed 's/ //' | sed 's/behind/-/')
+      offset="$offset%{$fg_bold[red]%}$pos%{$reset_color%}"
+    fi
 
     if [[ $st == "nothing to commit, working tree clean" ]]; then
       echo "$offset"
