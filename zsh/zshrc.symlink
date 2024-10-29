@@ -11,9 +11,6 @@ else
   # Add rbenv bin to path
   export PATH="~/.rbenv/bin:$PATH"
 
-  # Setup rbenv
-  eval "$(rbenv init -)"
-
   # Setup NVM
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -23,15 +20,18 @@ else
   alias git='LANG=en_US git'
 fi
 
-# source every .zsh file in this rep
-for config_file ($ZSH/**/*.zsh) source $config_file
-
 if [ $DEVENV ]
 then
   # nothing
 else
   # Brew
   eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  # Setup rbenv
+  eval "$(rbenv init -)"
+
+  # source every .zsh file in this rep
+  for config_file ($ZSH/**/*.zsh) source $config_file
 
   # ZSH autosuggestions
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
