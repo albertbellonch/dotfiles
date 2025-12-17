@@ -3,8 +3,11 @@ export ZSH=$HOME/code/dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
-# Add rbenv bin to path
-export PATH="~/.rbenv/bin:$PATH"
+if [ ! $SEQURA_MACHINE ]
+then
+  # Add rbenv bin to path
+  export PATH="~/.rbenv/bin:$PATH"
+fi
 
 # Setup NVM
 export NVM_DIR="$HOME/.nvm"
@@ -20,8 +23,11 @@ alias git='LANG=en_US git'
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Setup rbenv
-eval "$(rbenv init -)"
+if [ ! $SEQURA_MACHINE ]
+then
+  # Setup rbenv
+  eval "$(rbenv init -)"
+fi
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file

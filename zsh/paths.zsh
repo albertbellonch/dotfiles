@@ -2,4 +2,7 @@
 export PATH="$PATH:/Users/albert/code/dotfiles/bin"
 
 # MySQL path
-export PATH="$PATH:/usr/local/mysql/bin"
+if [ ! $SEQURA_MACHINE ]
+then
+  export PATH="$PATH:/usr/local/mysql/bin"
+fi
