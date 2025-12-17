@@ -47,5 +47,11 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
-# Editor is MacVim
+# Editor is vim
 export EDITOR=vim
+
+# Setup GPG TTY if Sequra machine
+if [ $SEQURA_MACHINE ]
+then
+  export GPG_TTY=$(tty)
+fi
