@@ -1,50 +1,39 @@
-if [ $DEVENV ]
+export ZSH=$HOME/code/dotfiles
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/code
+
+# Add rbenv bin to path
+export PATH="~/.rbenv/bin:$PATH"
+
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Python3
+export PATH="$PATH:/Users/albert/Library/Python/3.9/bin"
+
+# Set git language to English
+alias git='LANG=en_US git'
+
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Setup rbenv
+eval "$(rbenv init -)"
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) source $config_file
+
+# ZSH autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
 then
-  export ZSH=$HOME/dotfiles
-  export PROJECTS=/mnt
-else
-  export ZSH=$HOME/code/dotfiles
-
-  # your project folder that we can `c [tab]` to
-  export PROJECTS=~/code
-
-  # Add rbenv bin to path
-  export PATH="~/.rbenv/bin:$PATH"
-
-  # Setup NVM
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-  # Python3
-  export PATH="$PATH:/Users/albert/Library/Python/3.9/bin"
-
-  # Set git language to English
-  alias git='LANG=en_US git'
-fi
-
-if [ $DEVENV ]
-then
-  # nothing
-else
-  # Brew
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-
-  # Setup rbenv
-  eval "$(rbenv init -)"
-
-  # source every .zsh file in this rep
-  for config_file ($ZSH/**/*.zsh) source $config_file
-
-  # ZSH autosuggestions
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-  # use .localrc for SUPER SECRET CRAP that you don't
-  # want in your public, versioned repo.
-  if [[ -a ~/.localrc ]]
-  then
-    source ~/.localrc
-  fi
+  source ~/.localrc
 fi
 
 # initialize autocomplete here, otherwise functions won't be loaded

@@ -72,9 +72,5 @@ precmd() {
 
 uptime
 
-if [ $DEVENV ]; then
-  echo "Welcome back, Albert!"
-else
-  echo "Welcome back, Albert!" | lolcat
-  fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
-fi
+echo "Welcome back, Albert!" | lolcat
+fortune | cowsay -f ~/code/dotfiles/zsh/cowfiles/mediumpanda.cow | lolcat
